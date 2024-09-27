@@ -1,0 +1,1207 @@
+{% extends 'layouts/default/page.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="wrapper theme-6-active pimary-color-pink">
+        <!-- Top Menu Items -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="mobile-only-brand pull-left">
+                <div class="nav-header pull-left">
+                    <div class="logo-wrap">
+                        <a href="../panel">
+                            <img class="brand-img" src="{% static 'panel/img/logo.png' %}" alt="brand"/>
+                            <span class="brand-text">پتوس</span>
+                        </a>
+                    </div>
+                </div>
+                <a id="toggle_nav_btn" class="toggle-left-nav-btn inline-block ml-20 pull-left" href="#"><i
+                        class="zmdi zmdi-menu"></i></a>
+                <a id="toggle_mobile_search" dat a-toggle="collapse" data-target="#search_form" class="mobile-only-view"
+                   href="#"><i class="zmdi zmdi-search"></i></a>
+                <a id="toggle_mobile_nav" class="mobile-only-view" href="#"><i class="zmdi zmdi-more"></i></a>
+                <form id="search_form" role="search" class="top-nav-search collapse pull-left">
+                    <div class="input-group">
+                        <input type="text" name="search_title" class="form-control" placeholder="جستجو">
+                        <span class="input-group-btn">
+						<button type="button" class="btn  btn-default" data-target="#search_form" data-toggle="collapse"
+                                aria-label="Close" aria-expanded="true"><i class="zmdi zmdi-search"></i></button>
+						</span>
+                    </div>
+                </form>
+            </div>
+            <div id="mobile_only_nav" class="mobile-only-nav pull-right">
+                <ul class="nav navbar-right top-nav pull-right">
+                    <li>
+                        <a id="open_right_sidebar" href="#"><i class="zmdi zmdi-settings top-nav-icon"></i></a>
+                    </li>
+                    <li class="dropdown app-drp">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
+                                class="zmdi zmdi-apps top-nav-icon"></i></a>
+                        <ul class="dropdown-menu app-dropdown" data-dropdown-in="slideInRight"
+                            data-dropdown-out="flipOutX">
+                            <li>
+                                <div class="app-nicescroll-bar">
+                                    <ul class="app-icon-wrap pa-10">
+                                        <li>
+                                            <a href="#" class="connection-item">
+                                                <i class="zmdi zmdi-cloud-outline txt-info"></i>
+                                                <span class="block">آب و هوا</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="connection-item">
+                                                <i class="zmdi zmdi-email-open txt-success"></i>
+                                                <span class="block">ایمیل</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="connection-item">
+                                                <i class="zmdi zmdi-calendar-check txt-primary"></i>
+                                                <span class="block">تقویم</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="connection-item">
+                                                <i class="zmdi zmdi-map txt-danger"></i>
+                                                <span class="block">نقشه</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="connection-item">
+                                                <i class="zmdi zmdi-comment-outline txt-warning"></i>
+                                                <span class="block">چت</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="connection-item">
+                                                <i class="zmdi zmdi-assignment-account"></i>
+                                                <span class="block">مخاطبین</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="app-box-bottom-wrap">
+                                    <hr class="light-grey-hr ma-0"/>
+                                    <a class="block text-center read-all" href="javascript:void(0)">بیشتر </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown full-width-drp">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
+                                class="zmdi zmdi-more-vert top-nav-icon"></i></a>
+                        <ul class="dropdown-menu mega-menu pa-0" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                            <li class="product-nicescroll-bar row">
+                                <ul class="pa-20">
+                                    <li class="col-md-3 col-xs-6 col-menu-list">
+                                        <a href="javascript:void(0);">
+                                            <div class="pull-left"><i class="zmdi zmdi-landscape mr-20"></i><span
+                                                    class="right-nav-text"> <a href="">پنل کاربری</a></span></div>
+                                            <div class="pull-right"></div>
+                                            <div class="clearfix"></div>
+                                        </a>
+                                        <hr class="light-grey-hr ma-0"/>
+                                        <ul>
+                                            <li>
+                                                <a href="../">پنل کاربری</a>
+                                            </li>
+                                            <li>
+                                                <a href="503_blank"> تقویم آبیاری</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-md-3 col-xs-6 col-menu-list">
+                                        <a href="503_blank">
+                                            <div class="pull-left">
+                                                <i class="zmdi zmdi-shopping-basket mr-20"></i><span
+                                                    class="right-nav-text"> صفحات ویژه</span>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </a>
+                                        <hr class="light-grey-hr ma-0"/>
+                                        <ul>
+                                            <li>
+                                                <a href="503_blank">لحظه شمار</a>
+                                            </li>
+                                            <li>
+                                                <a href="503_blank">سوالات متداول</a>
+                                            </li>
+                                            <li>
+                                                <a href="503_blank"> مستندات</a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown alert-drp">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown"><i
+                                class="zmdi zmdi-notifications top-nav-icon"></i><span
+                                class="top-nav-icon-badge">1</span></a>
+                        <ul class="dropdown-menu alert-dropdown" data-dropdown-in="bounceIn"
+                            data-dropdown-out="bounceOut">
+                            <li>
+                                <div class="notification-box-head-wrap">
+                                    <span class="notification-box-head pull-left inline-block">اطلاعیه ها</span>
+                                    <a class="txt-danger pull-right clear-notifications inline-block" href="#">
+                                        پاک کردن همه </a>
+                                    <div class="clearfix"></div>
+                                    <hr class="light-grey-hr ma-0"/>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="streamline message-nicescroll-bar">
+                                    <div class="sl-item">
+                                        <a href="../panel">
+                                            <div class="icon bg-green">
+                                                <i class="zmdi zmdi-flag"></i>
+                                            </div>
+                                            <div class="sl-content">
+												<span class="inline-block capitalize-font  pull-left truncate head-notifications">
+												اشتراک جدید ایجاد شد</span>
+                                                <span class="inline-block font-11  pull-right notifications-time">2 بعدازظهر</span>
+                                                <div class="clearfix"></div>
+                                                <p class="truncate">مشتری محترم، اشتراک شما ایجاد گردید. پتوس</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <hr class="light-grey-hr ma-0"/>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="notification-box-bottom-wrap">
+                                    <hr class="light-grey-hr ma-0"/>
+                                    <a class="block text-center read-all" href="503_blank">همه را بخوان </a>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown auth-drp">
+                        <a href="#" class="dropdown-toggle pr-0" data-toggle="dropdown"><img
+                                src="{% static 'panel/img/user1.png' %}" alt="user_auth"
+                                class="user-auth-img img-circle"/><span class="user-online-status"></span></a>
+                        <ul class="dropdown-menu user-auth-dropdown" data-dropdown-in="flipInX"
+                            data-dropdown-out="flipOutX">
+                            <li>
+                                <a href="503_blank"><i class="zmdi zmdi-account"></i><span>مشخصات</span></a>
+                            </li>
+
+                            <li>
+                                <a href="503_blank"><i class="zmdi zmdi-email"></i><span>صندوق ورودی</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="zmdi zmdi-settings"></i><span>تنظیمات</span></a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="sub-menu show-on-hover">
+                                <a href="#" class="dropdown-toggle pr-0 level-2-drp"><i
+                                        class="zmdi zmdi-check text-success"></i>در دسترس</a>
+                                <ul class="dropdown-menu open-left-side">
+                                    <li>
+                                        <a href="#"><i
+                                                class="zmdi zmdi-check text-success"></i><span>در دسترس</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i
+                                                class="zmdi zmdi-circle-o text-warning"></i><span>مشغول</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="zmdi zmdi-minus-circle-outline text-danger"></i><span>آف لاین</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="log-out"><i class="zmdi zmdi-power"></i><span>خروج</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /Top Menu Items -->
+
+        <!-- Left Sidebar Menu -->
+        <div class="fixed-sidebar-left">
+            <ul class="nav navbar-nav side-nav nicescroll-bar">
+
+                <!-- User Profile -->
+                <li>
+                    <div class="user-profile text-center">
+                        <img src="{% static 'panel/img/user1.png' %}" alt="user_auth" class="user-auth-img img-circle"/>
+                        <div class="dropdown mt-5">
+                            <a href="#" class="dropdown-toggle pr-0 bg-transparent" data-toggle="dropdown">مدیر پروژه
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu user-auth-dropdown" data-dropdown-in="flipInX"
+                                data-dropdown-out="flipOutX">
+                                <li>
+                                    <a href="503_blank"><i class="zmdi zmdi-account"></i><span>مشخصات</span></a>
+                                </li>
+
+                                <li>
+                                    <a href="503_blank"><i class="zmdi zmdi-email"></i><span>صندوق ورودی</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="zmdi zmdi-settings"></i><span>تنظیمات</span></a>
+                                </li>
+                                <li class="divider"></li>
+                                <li class="sub-menu show-on-hover">
+                                    <a href="#" class="dropdown-toggle pr-0 level-2-drp"><i
+                                            class="zmdi zmdi-check text-success"></i> دردسترس</a>
+                                    <ul class="dropdown-menu open-left-side">
+                                        <li>
+                                            <a href="#"><i class="zmdi zmdi-check text-success"></i><span>دردسترس</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i
+                                                    class="zmdi zmdi-circle-o text-warning"></i><span>مشغول</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="zmdi zmdi-minus-circle-outline text-danger"></i><span>آف لاین</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="log-out"><i class="zmdi zmdi-power"></i><span>خروج</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- /User Profile -->
+                <li class="navigation-header">
+                    <span>اصلی</span>
+                    <i class="zmdi zmdi-more"></i>
+                </li>
+                <li>
+                    <a href="../" class="active"  data-toggle="collapse" data-target="#dashboard_dr">
+                        <div class="pull-left"><i class="zmdi zmdi-landscape mr-20"></i><span class="right-nav-text">پنل کاربری</span>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="503_blank">
+                        <div class="pull-left"><i class="zmdi zmdi-calendar mr-20"></i><span class="right-nav-text">تقویم آبیاری</span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </a>
+                </li>
+
+
+                <li>
+                    <hr class="light-grey-hr mb-10"/>
+                </li>
+                <li class="navigation-header">
+                    <span>ویژه</span>
+                    <i class="zmdi zmdi-more"></i>
+                </li>
+                <li>
+                    <a href="503_blank">
+                        <div class="pull-left"><i class="zmdi zmdi-time-restore mr-20"></i><span class="right-nav-text">لحظه شمار</span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="503_blank">
+                        <div class="pull-left"><i class="zmdi zmdi-comments mr-20"></i><span class="right-nav-text">سوالات متداول</span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="503_blank">
+                        <div class="pull-left"><i class="zmdi zmdi-book mr-20"></i><span
+                                class="right-nav-text">مستندات</span></div>
+                        <div class="clearfix"></div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="log-out">
+                        <div class="pull-left"><i class="zmdi zmdi-power mr-20"></i><span
+                                class="right-nav-text">خروج</span></div>
+                        <div class="clearfix"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- /Left Sidebar Menu -->
+
+        <!-- Right Sidebar Menu -->
+        <div class="fixed-sidebar-right">
+            <ul class="right-sidebar">
+                <li>
+                    <div class="tab-struct custom-tab-1">
+                        <ul role="tablist" class="nav nav-tabs" id="right_sidebar_tab">
+                            <li class="active" role="presentation"><a aria-expanded="true" data-toggle="tab" role="tab"
+                                                                      id="chat_tab_btn" href="#chat_tab">چت</a></li>
+                            <li role="presentation" class=""><a data-toggle="tab" id="messages_tab_btn" role="tab"
+                                                                href="#messages_tab" aria-expanded="false">پیام ها</a>
+                            </li>
+                            <li role="presentation" class=""><a data-toggle="tab" id="todo_tab_btn" role="tab"
+                                                                href="#todo_tab" aria-expanded="false">انجام دادن</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="right_sidebar_content">
+                            <div id="chat_tab" class="tab-pane fade active in" role="tabpanel">
+                                <div class="chat-cmplt-wrap">
+                                    <div class="chat-box-wrap">
+                                        <div class="add-friend">
+                                            <a href="503_blank" class="inline-block txt-grey">
+                                                <i class="zmdi zmdi-more"></i>
+                                            </a>
+                                            <span class="inline-block txt-dark">کاربران</span>
+                                            <a href="503_blank" class="inline-block text-right txt-grey"><i
+                                                    class="zmdi zmdi-plus"></i></a>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <form role="search" class="chat-search pl-15 pr-15 pb-15">
+                                            <div class="input-group">
+                                                <input type="text" id="example-input1-group2"
+                                                       name="example-input1-group2" class="form-control"
+                                                       placeholder="جستجو">
+                                                <span class="input-group-btn">
+												<button type="button" class="btn  btn-default"><i
+                                                        class="zmdi zmdi-search"></i></button>
+												</span>
+                                            </div>
+                                        </form>
+                                        <div id="chat_list_scroll">
+                                            <div class="nicescroll-bar">
+                                                <ul class="chat-list-wrap">
+                                                    <li class="chat-list">
+                                                        <div class="chat-body">
+                                                            <a href="503_blank">
+                                                                <div class="chat-data">
+                                                                    <img class="user-img img-circle"
+                                                                         src="{% static 'panel/img/user.png' %}"
+                                                                         alt="user"/>
+                                                                    <div class="user-data">
+                                                                        <span class="name block capitalize-font"></span>
+                                                                        <span class="time block truncate txt-grey"></span>
+                                                                    </div>
+                                                                    <div class="status away"></div>
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                            </a>
+                                                            <a href="503_blank">
+                                                                <div class="chat-data">
+                                                                    <img class="user-img img-circle"
+                                                                         src="{% static 'panel/img/user1.png' %}"
+                                                                         alt="user"/>
+                                                                    <div class="user-data">
+                                                                        <span class="name block capitalize-font"></span>
+                                                                        <span class="time block truncate txt-grey"></span>
+                                                                    </div>
+                                                                    <div class="status offline"></div>
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                            </a>
+                                                            <a href="503_blank">
+                                                                <div class="chat-data">
+                                                                    <img class="user-img img-circle"
+                                                                         src="{% static 'panel/img/user2.png' %}"
+                                                                         alt="user"/>
+                                                                    <div class="user-data">
+                                                                        <span class="name block capitalize-font"></span>
+                                                                        <span class="time block truncate txt-grey"></span>
+                                                                    </div>
+                                                                    <div class="status online"></div>
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                            </a>
+                                                            <a href="503_blank">
+                                                                <div class="chat-data">
+                                                                    <img class="user-img img-circle"
+                                                                         src="{% static 'panel/img/user3.png' %}"
+                                                                         alt="user"/>
+                                                                    <div class="user-data">
+                                                                        <span class="name block capitalize-font"></span>
+                                                                        <span class="time block truncate txt-grey"></span>
+                                                                    </div>
+                                                                    <div class="status online"></div>
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                            </a>
+                                                            <a href="503_blank">
+                                                                <div class="chat-data">
+                                                                    <img class="user-img img-circle"
+                                                                         src="{% static 'panel/img/user.png' %}"
+                                                                         alt="user"/>
+                                                                    <div class="user-data">
+                                                                        <span class="name block capitalize-font"></span>
+                                                                        <span class="time block truncate txt-grey"></span>
+                                                                    </div>
+                                                                    <div class="status offline"></div>
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                            </a>
+                                                            <a href="503_blank">
+                                                                <div class="chat-data">
+                                                                    <img class="user-img img-circle"
+                                                                         src="{% static 'panel/img/user1.png' %}"
+                                                                         alt="user"/>
+                                                                    <div class="user-data">
+                                                                        <span class="name block capitalize-font"></span>
+                                                                        <span class="time block truncate txt-grey"></span>
+                                                                    </div>
+                                                                    <div class="status online"></div>
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                            </a>
+                                                            <a href="503_blank">
+                                                                <div class="chat-data">
+                                                                    <img class="user-img img-circle"
+                                                                         src="{% static 'panel/img/user2.png' %}"
+                                                                         alt="user"/>
+                                                                    <div class="user-data">
+                                                                        <span class="name block capitalize-font"></span>
+                                                                        <span class="time block truncate txt-grey"></span>
+                                                                    </div>
+                                                                    <div class="status away"></div>
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                            </a>
+                                                            <a href="503_blank">
+                                                                <div class="chat-data">
+                                                                    <img class="user-img img-circle"
+                                                                         src="{% static 'panel/img/user3.png' %}"
+                                                                         alt="user"/>
+                                                                    <div class="user-data">
+                                                                        <span class="name block capitalize-font"></span>
+                                                                        <span class="time block truncate txt-grey"></span>
+                                                                    </div>
+                                                                    <div class="status online"></div>
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                            </a>
+                                                            <a href="503_blank">
+                                                                <div class="chat-data">
+                                                                    <img class="user-img img-circle"
+                                                                         src="{% static 'panel/img/user4.png' %}"
+                                                                         alt="user"/>
+                                                                    <div class="user-data">
+                                                                        <span class="name block capitalize-font"></span>
+                                                                        <span class="time block truncate txt-grey"></span>
+                                                                    </div>
+                                                                    <div class="status away"></div>
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="recent-chat-box-wrap">
+                                        <div class="recent-chat-wrap">
+                                            <div class="panel-heading ma-0">
+                                                <div class="goto-back">
+                                                    <a id="goto_back" href="503_blank" class="inline-block txt-grey">
+                                                        <i class="zmdi zmdi-chevron-left"></i>
+                                                    </a>
+                                                    <span class="inline-block txt-dark">ریان</span>
+                                                    <a href="javascript:void(0)"
+                                                       class="inline-block text-right txt-grey"><i
+                                                            class="zmdi zmdi-more"></i></a>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                            <div class="panel-wrapper collapse in">
+                                                <div class="panel-body pa-0">
+                                                    <div class="chat-content">
+                                                        <ul class="nicescroll-bar pt-20">
+                                                            <li class="friend">
+                                                                <div class="friend-msg-wrap">
+                                                                    <img class="user-img img-circle block pull-left"
+                                                                         src="{% static 'panel/img/user.png' %}"
+                                                                         alt="user"/>
+                                                                    <div class="msg pull-left">
+                                                                        <p></p>
+                                                                        <div class="msg-per-detail text-right">
+                                                                            <span class="msg-time txt-grey"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="self mb-10">
+                                                                <div class="self-msg-wrap">
+                                                                    <div class="msg block pull-right">
+                                                                        <div class="msg-per-detail text-right">
+                                                                            <span class="msg-time txt-grey"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="self">
+                                                                <div class="self-msg-wrap">
+                                                                    <div class="msg block pull-right">
+
+                                                                        <div class="msg-per-detail text-right">
+                                                                            <span class="msg-time txt-grey"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="friend">
+                                                                <div class="friend-msg-wrap">
+                                                                    <img class="user-img img-circle block pull-left"
+                                                                         src="{% static 'panel/img/user.png' %}"
+                                                                         alt="user"/>
+                                                                    <div class="msg pull-left">
+                                                                        <p></p>
+                                                                        <div class="msg-per-detail  text-right">
+                                                                            <span class="msg-time txt-grey"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <input type="text" id="input_msg_send" name="send-msg"
+                                                               class="input-msg-send form-control"
+                                                               placeholder="Type something">
+                                                        <div class="input-group-btn emojis">
+                                                            <div class="dropup">
+                                                                <button type="button"
+                                                                        class="btn  btn-default  dropdown-toggle"
+                                                                        data-toggle="dropdown"><i
+                                                                        class="zmdi zmdi-mood"></i></button>
+                                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                                    <li><a href="503_blank"></a></li>
+                                                                    <li><a href="503_blank"></a></li>
+                                                                    <li class="divider"></li>
+                                                                    <li><a href="503_blank"></a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="input-group-btn attachment">
+                                                            <div class="fileupload btn  btn-default"><i
+                                                                    class="zmdi zmdi-attachment-alt"></i>
+                                                                <input type="file" class="upload">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="messages_tab" class="tab-pane fade" role="tabpanel">
+                                <div class="message-box-wrap">
+                                    <div class="msg-search">
+                                        <a href="503_blank" class="inline-block txt-grey">
+                                            <i class="zmdi zmdi-more"></i>
+                                        </a>
+                                        <span class="inline-block txt-dark">پیام ها</span>
+                                        <a href="503_blank" class="inline-block text-right txt-grey"><i
+                                                class="zmdi zmdi-search"></i></a>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="set-height-wrap">
+                                        <div class="streamline message-box nicescroll-bar">
+                                            <a href="503_blank">
+                                                <div class="sl-item unread-message">
+                                                    <div class="sl-avatar avatar avatar-sm avatar-circle">
+                                                        <img class="img-responsive img-circle"
+                                                             src="{% static 'panel/img/user.png' %}" alt="avatar"/>
+                                                    </div>
+                                                    <div class="sl-content">
+                                                        <span class="inline-block capitalize-font   pull-left message-per"></span>
+                                                        <span class="inline-block font-11  pull-right message-time"></span>
+                                                        <div class="clearfix"></div>
+                                                        <span class=" truncate message-subject"></span>
+                                                        <p class="txt-grey truncate"></p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="503_blank">
+                                                <div class="sl-item">
+                                                    <div class="sl-avatar avatar avatar-sm avatar-circle">
+                                                        <img class="img-responsive img-circle"
+                                                             src="{% static 'panel/img/user1.png' %}" alt="avatar"/>
+                                                    </div>
+                                                    <div class="sl-content">
+                                                        <span class="inline-block capitalize-font   pull-left message-per"></span>
+                                                        <span class="inline-block font-11  pull-right message-time"></span>
+                                                        <div class="clearfix"></div>
+                                                        <span class=" truncate message-subject"></span>
+                                                        <p class="txt-grey truncate"></p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="503_blank">
+                                                <div class="sl-item">
+                                                    <div class="sl-avatar avatar avatar-sm avatar-circle">
+                                                        <img class="img-responsive img-circle"
+                                                             src="{% static 'panel/img/user2.png' %}" alt="avatar"/>
+                                                    </div>
+                                                    <div class="sl-content">
+                                                        <span class="inline-block capitalize-font   pull-left message-per"></span>
+                                                        <span class="inline-block font-11  pull-right message-time"></span>
+                                                        <div class="clearfix"></div>
+                                                        <span class=" truncate message-subject"></span>
+                                                        <p class="txt-grey truncate"></p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="503_blank">
+                                                <div class="sl-item unread-message">
+                                                    <div class="sl-avatar avatar avatar-sm avatar-circle">
+                                                        <img class="img-responsive img-circle"
+                                                             src="{% static 'panel/img/user3.png' %}" alt="avatar"/>
+                                                    </div>
+                                                    <div class="sl-content">
+                                                        <span class="inline-block capitalize-font   pull-left message-per"></span>
+                                                        <span class="inline-block font-11  pull-right message-time"></span>
+                                                        <div class="clearfix"></div>
+                                                        <span class=" truncate message-subject"></span>
+                                                        <p class="txt-grey truncate"></p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="503_blank">
+                                                <div class="sl-item unread-message">
+                                                    <div class="sl-avatar avatar avatar-sm avatar-circle">
+                                                        <img class="img-responsive img-circle"
+                                                             src="{% static 'panel/img/user4.png' %}" alt="avatar"/>
+                                                    </div>
+                                                    <div class="sl-content">
+                                                        <span class="inline-block capitalize-font   pull-left message-per"></span>
+                                                        <span class="inline-block font-11  pull-right message-time"></span>
+                                                        <div class="clearfix"></div>
+                                                        <span class=" truncate message-subject"></span>
+                                                        <p class="txt-grey truncate"></p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="503_blank">
+                                                <div class="sl-item">
+                                                    <div class="sl-avatar avatar avatar-sm avatar-circle">
+                                                        <img class="img-responsive img-circle"
+                                                             src="{% static 'panel/img/user.png' %}" alt="avatar"/>
+                                                    </div>
+                                                    <div class="sl-content">
+                                                        <span class="inline-block capitalize-font   pull-left message-per"></span>
+                                                        <span class="inline-block font-11  pull-right message-time"></span>
+                                                        <div class="clearfix"></div>
+                                                        <span class=" truncate message-subject"></span>
+                                                        <p class="txt-grey truncate"></p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="503_blank">
+                                                <div class="sl-item">
+                                                    <div class="sl-avatar avatar avatar-sm avatar-circle">
+                                                        <img class="img-responsive img-circle"
+                                                             src="{% static 'panel/img/user1.png' %}" alt="avatar"/>
+                                                    </div>
+                                                    <div class="sl-content">
+                                                        <span class="inline-block capitalize-font   pull-left message-per"></span>
+                                                        <span class="inline-block font-11  pull-right message-time"></span>
+                                                        <div class="clearfix"></div>
+                                                        <span class=" truncate message-subject"></span>
+                                                        <p class="txt-grey truncate"></p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="todo_tab" class="tab-pane fade" role="tabpanel">
+                                <div class="todo-box-wrap">
+                                    <div class="add-todo">
+                                        <a href="503_blank" class="inline-block txt-grey">
+                                            <i class="zmdi zmdi-more"></i>
+                                        </a>
+                                        <span class="inline-block txt-dark">لیست برای انجام کار</span>
+                                        <a href="503_blank" class="inline-block text-right txt-grey"><i
+                                                class="zmdi zmdi-plus"></i></a>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="set-height-wrap">
+                                        <!-- Todo-List -->
+                                        <ul class="todo-list nicescroll-bar">
+                                            <li class="todo-item">
+                                                <div class="checkbox checkbox-default">
+                                                    <input type="checkbox" id="checkbox01"/>
+                                                    <label for="checkbox01"></label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <hr class="light-grey-hr"/>
+                                            </li>
+                                            <li class="todo-item">
+                                                <div class="checkbox checkbox-pink">
+                                                    <input type="checkbox" id="checkbox02"/>
+                                                    <label for="checkbox02"></label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <hr class="light-grey-hr"/>
+                                            </li>
+                                            <li class="todo-item">
+                                                <div class="checkbox checkbox-warning">
+                                                    <input type="checkbox" id="checkbox03" checked/>
+                                                    <label for="checkbox03"></label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <hr class="light-grey-hr"/>
+                                            </li>
+                                            <li class="todo-item">
+                                                <div class="checkbox checkbox-success">
+                                                    <input type="checkbox" id="checkbox04" checked/>
+                                                    <label for="checkbox04"></label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <hr class="light-grey-hr"/>
+                                            </li>
+                                            <li class="todo-item">
+                                                <div class="checkbox checkbox-danger">
+                                                    <input type="checkbox" id="checkbox05" checked/>
+                                                    <label for="checkbox05"></label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <hr class="light-grey-hr"/>
+                                            </li>
+                                            <li class="todo-item">
+                                                <div class="checkbox checkbox-purple">
+                                                    <input type="checkbox" id="checkbox06" checked/>
+                                                    <label for="checkbox06"></label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <hr class="light-grey-hr"/>
+                                            </li>
+                                        </ul>
+                                        <!-- /Todo-List -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- /Right Sidebar Menu -->
+
+
+        <!-- Main Content -->
+        <div class="page-wrapper">
+            <div class="container-fluid pt-25">
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-default card-view pa-0 bg-gradient">
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body pa-0">
+                                    <div class="sm-data-box">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
+                                                    <span class="txt-light block counter"><span id="gardenName"></span></span>
+                                                    <!-- <span class="weight-500 uppercase-font block font-13 txt-light" id="GardenName">{{ land.name }}</span> -->
+                                                    <span class="weight-500 uppercase-font block font-13 txt-light">نام باغ</span>
+                                                </div>
+                                                <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
+                                                    <i class="icon-location-pin  data-right-rep-icon txt-light"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-default card-view pa-0 bg-gradient1">
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body pa-0">
+                                    <div class="sm-data-box">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
+                                                    <span class="txt-light block counter"><span id="lastTemp"></span>°C</span>
+                                                    <span class="weight-500 uppercase-font block txt-light">دما</span>
+                                                </div>
+                                                <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
+                                                    <i class="icon-speedometer data-right-rep-icon txt-light"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-default card-view pa-0 bg-gradient2">
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body pa-0">
+                                    <div class="sm-data-box">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-xs-6 text-center pl-0 pr-0 txt-light data-wrap-left">
+                                                    <span class="block counter"><span class="counter-anim"
+                                                                                      id="today_water"></span></span>
+                                                    <span class="weight-500 uppercase-font block">مصرف آب روزانه</span>
+                                                </div>
+                                                <div class="col-xs-6 text-center  pl-0 pr-0 txt-light data-wrap-right">
+                                                    <i class=" icon-drop data-right-rep-icon"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="panel panel-default card-view pa-0 bg-gradient3">
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body pa-0">
+                                    <div class="sm-data-box">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
+                                                    <!-- <span class="txt-light block counter"><span class="counter-anim">آفتابی</span></span> -->
+                                                    <span class="weight-500 uppercase-font block txt-light">وضعیت خروجی</span>
+                                                </div>
+                                                <div class="col-xs-6 text-center  pl-0 pr-0 pt-25  data-wrap-right">
+                                                    <input id="toggle_spout" type="checkbox" checked
+                                                           data-toggle="toggle"
+                                                           data-on="<i class='fa fa-check-circle'></i> باز"
+                                                           data-off="<i class='fa fa-times-circle'></i> بسته"
+                                                           data-onstyle="primary" data-offstyle="success">
+
+                                                    <!-- <div class="pull-left">
+                                                                          <div  class="tab-struct custom-tab-1">
+                                                                              <ul role="tablist" class="nav nav-tabs" id="myTabs_9">
+                                                                                  <li class="active" role="presentation"><a aria-expanded="true"  data-toggle="tab" role="tab" id="home_tab_9" href="#home_9">فعال</a></li>
+                                                                                  <li role="presentation" class=""><a  data-toggle="tab" id="profile_tab_9" role="tab" href="#profile_9" aria-expanded="false">غیر فعال</a></li>
+                                                                              </ul>
+                                                                          </div>
+                                                                      </div> -->
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Row -->
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                        <div class="panel panel-default card-view">
+                            <div class="panel-heading">
+                                <div class="pull-left">
+                                    <h6 class="panel-title txt-dark"> رطوبت خاک</h6>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="#" class="pull-left inline-block full-screen mr-15">
+                                        <i class="zmdi zmdi-fullscreen"></i>
+                                    </a>
+                                    <div class="pull-left inline-block dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"
+                                           role="button"><i class="zmdi zmdi-more-vert"></i></a>
+                                        <ul class="dropdown-menu bullet dropdown-menu-right" role="menu">
+                                            <li role="presentation"><a href="#" id="soilmoisture_momentary" role="menuitem"><i
+                                                    class="icon wb-reply" aria-hidden="true"></i>لحظه ای</a></li>
+                                            <li role="presentation"><a href="#" id="soilmoistureavgs_weekly"
+                                                                       role="menuitem"><i class="icon wb-share"
+                                                                                          aria-hidden="true"></i>میانگین (هفتنگی)</a>
+                                            </li>
+                                            <li role="presentation"><a href="#" id="soilmoistureavgs_monthly"
+                                                                       role="menuitem"><i class="icon wb-trash"
+                                                                                          aria-hidden="true"></i>میانگین (ماهانه)</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body">
+                                    <div id="soilmoisture" class="" style="height:330px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="panel panel-default card-view panel-refresh">
+                            <div class="refresh-container">
+                                <div class="la-anim-1"></div>
+                            </div>
+                            <div class="panel-heading">
+                                <div class="pull-left">
+                                    <h6 class="panel-title txt-dark">مصرف آب شاهد و هوشمند (متر مکعب بر هکتار)</h6>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="#" class="pull-left inline-block refresh mr-15">
+                                        <i class="zmdi zmdi-replay"></i>
+                                    </a>
+                                    <div class="pull-left inline-block dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"
+                                           role="button"><i class="zmdi zmdi-more-vert"></i></a>
+                                        <ul class="dropdown-menu bullet dropdown-menu-right" role="menu">
+                                            <li role="presentation"><a href="#" role="menuitem" id="lastwater_weekly"><i
+                                                    class="icon wb-reply" aria-hidden="true"></i>هفتنگی</a></li>
+                                            <li role="presentation"><a href="#" role="menuitem" id="lastwater_monthly"><i
+                                                    class="icon wb-share" aria-hidden="true"></i>ماهانه</a></li>
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i
+                                                    class="icon wb-trash" aria-hidden="true"></i>کلی</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body">
+                                    <div id="lastwater" class="" style="height:330px;"></div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- /Row -->
+
+                <!-- Row -->
+                <div class="row">
+
+                    <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12">
+                        <div class="panel panel-default card-view panel-refresh">
+                            <div class="refresh-container">
+                                <div class="la-anim-1"></div>
+                            </div>
+                            <div class="panel-heading">
+                                <div class="pull-left">
+                                    <h6 class="panel-title txt-dark"> رطوبت هوا</h6>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body row pa-0">
+                                    <div class="sm-data-box">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-xs-12 text-center pl-0 pr-0 data-wrap-left txt-own">
+                                                    {#													<span class="block"><i class="zmdi zmdi-square-down  font-18 mr-5"></i><span class="weight-500 uppercase-font">میلی متر</span></span>#}
+                                                    <span class="block counter"><span class="counter-anim"
+                                                                                      id="today_humidity"></span> ٪</span>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-12 text-center  pl-0 pr-0 data-wrap-right">
+                                                    {#                          	                    <div id="humiditySensor" class="" style="height: 235px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: transparent;" ><div style="position: relative; overflow: hidden; width: 181px; height: 235px; padding: 0px; margin: 0px; border-width: 0px; cursor: pointer;"><canvas width="181" height="235" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 181px; height: 235px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div style="position: absolute; display: none; border-style: solid; white-space: nowrap; z-index: 9999999; transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s, top 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s; background-color: rgb(33, 33, 33); border-width: 0px; border-color: rgb(51, 51, 51); border-radius: 0px; color: rgb(255, 255, 255); font: 12px / 18px Montserrat, sans-serif; padding: 10px; left: -55px; top: 52px;">دوشنبه<br><span style="display:inline-block;margin-right:5px;border-radius:10px;width:9px;height:9px;background-color:#208a5d;"></span>تبخیر: 160</div></div>#}
+                                                    <!-- <div id="sparkline_6" class="sp-small-chart"><canvas width="150" height="343" style="display: inline-block; width: 100px; height: 124px; vertical-align: top;"></canvas></div> -->
+                                                    <div id="humiditySensor" class=""
+                                                         style="height: 235px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: transparent;">
+                                                        <div style="position: relative; overflow: hidden; width: 181px; height: 235px; padding: 0px; margin: 0px; border-width: 0px; cursor: pointer;">
+                                                            <canvas width="181" height="235" data-zr-dom-id="zr_0"
+                                                                    style="position: absolute; left: 0px; top: 0px; width: 181px; height: 235px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                                                        </div>
+                                                        <div style="position: absolute; display: none; border-style: solid; white-space: nowrap; z-index: 9999999; transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s, top 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s; background-color: rgb(33, 33, 33); border-width: 0px; border-color: rgb(51, 51, 51); border-radius: 0px; color: rgb(255, 255, 255); font: 12px / 18px Montserrat, sans-serif; padding: 10px; left: -55px; top: 52px;">
+                                                            دوشنبه<br><span
+                                                                style="display:inline-block;margin-right:5px;border-radius:10px;width:9px;height:9px;background-color:#208a5d;"></span>تبخیر:
+                                                            160
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
+                        <div class="panel panel-default card-view panel-refresh">
+                            <div class="refresh-container">
+                                <div class="la-anim-1"></div>
+                            </div>
+                            <div class="panel-heading">
+                                <div class="pull-left">
+                                    <h6 class="panel-title txt-dark">نمودار درجه روز رشد (GDD) </h6>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="#" class="pull-left inline-block refresh mr-15">
+                                        <i class="zmdi zmdi-replay"></i>
+                                    </a>
+                                    <div class="pull-left inline-block dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"
+                                           role="button"><i class="zmdi zmdi-more-vert"></i></a>
+                                        <ul class="dropdown-menu bullet dropdown-menu-right" role="menu">
+                                            <li role="presentation"><a href="#" role="menuitem" id="gdds_weekly"><i
+                                                    class="icon wb-reply" aria-hidden="true"></i>هفتنگی</a></li>
+                                            <li role="presentation"><a href="#" role="menuitem" id="gdds_monthly"><i
+                                                    class="icon wb-share" aria-hidden="true"></i>ماهانه</a></li>
+                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i
+                                                    class="icon wb-trash" aria-hidden="true"></i>کلی</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body">
+                                    <div id="gddchart" class="" style="height:330px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                        <div class="panel panel-default card-view panel-refresh">
+                            <div class="refresh-container">
+                                <div class="la-anim-1"></div>
+                            </div>
+
+                            <div class="panel-heading">
+                                <div class="pull-left">
+                                    <h6 class="panel-title txt-dark">دمای حداقل و حداکثر C°</h6>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="#" class="pull-left inline-block refresh mr-15">
+                                        <i class="zmdi zmdi-replay"></i>
+                                    </a>
+                                    <div class="pull-left inline-block dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"
+                                           role="button"><i class="zmdi zmdi-more-vert"></i></a>
+                                        <ul class="dropdown-menu bullet dropdown-menu-right" role="menu">
+                                            <li role="presentation"><a href="#" id='weeklytemperature' role="menuitem"
+                                                                       data-toggle="dropdown"><i class="icon wb-reply"
+                                                                                                 aria-hidden="true"></i>هفتنگی</a>
+                                            </li>
+                                            <li role="presentation"><a href="#" id='monthlytemperature' role="menuitem"
+                                                                       data-toggle="dropdown"><i class="icon wb-share"
+                                                                                                 aria-hidden="true"></i>ماهانه</a>
+                                            </li>
+                                            <!-- <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i class="icon wb-trash" aria-hidden="true"></i>New</a></li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body">
+                                    <div class="flot-container" style="height:330px">
+                                        <div id="temperaturSensor" class="demo-placeholder"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Row -->
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer container-fluid pl-30 pr-30">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p>© طراحی و اجرا توسط شرکت پیام توسعه سرزمین تمامی حقوق این برنامه محفوظ و کپی برداری از آن
+                            پیگرد قانونی دارد</p>
+                    </div>
+                </div>
+            </footer>
+            <!-- /Footer -->
+
+        </div>
+        <!-- /Main Content -->
+
+    </div>
+    <script>
+        past_week_days = ['{{ week_values.6.weekday }}', '{{ week_values.5.weekday }}', '{{ week_values.4.weekday }}', '{{ week_values.3.weekday }}', '{{ week_values.2.weekday }}', '{{ week_values.1.weekday }}', '{{ week_values.0.weekday }}']
+        week_soil_moisture_avgs = [{{ week_values.6.avg_soil_moisture }}, {{ week_values.5.avg_soil_moisture }}, {{ week_values.4.avg_soil_moisture }}, {{ week_values.3.avg_soil_moisture }}, {{ week_values.2.avg_soil_moisture }}, {{ week_values.1.avg_soil_moisture }}, {{ week_values.0.avg_soil_moisture }}]
+        week2_soil_moisture_avgs = [{{ week_values.13.avg_soil_moisture }}, {{ week_values.12.avg_soil_moisture }}, {{ week_values.11.avg_soil_moisture }}, {{ week_values.10.avg_soil_moisture }}, {{ week_values.9.avg_soil_moisture }}, {{ week_values.8.avg_soil_moisture }}, {{ week_values.7.avg_soil_moisture }}]
+        week3_soil_moisture_avgs = [{{ week_values.20.avg_soil_moisture }}, {{ week_values.19.avg_soil_moisture }}, {{ week_values.18.avg_soil_moisture }}, {{ week_values.17.avg_soil_moisture }}, {{ week_values.16.avg_soil_moisture }}, {{ week_values.15.avg_soil_moisture }}, {{ week_values.14.avg_soil_moisture }}]
+        week4_soil_moisture_avgs = [{{ week_values.27.avg_soil_moisture }}, {{ week_values.26.avg_soil_moisture }}, {{ week_values.25.avg_soil_moisture }}, {{ week_values.24.avg_soil_moisture }}, {{ week_values.23.avg_soil_moisture }}, {{ week_values.22.avg_soil_moisture }}, {{ week_values.21.avg_soil_moisture }}]
+        week5_soil_moisture_avgs = [{{ week_values.34.avg_soil_moisture }}, {{ week_values.33.avg_soil_moisture }}, {{ week_values.32.avg_soil_moisture }}, {{ week_values.31.avg_soil_moisture }}, {{ week_values.30.avg_soil_moisture }}, {{ week_values.29.avg_soil_moisture }}, {{ week_values.28.avg_soil_moisture }}]
+        week6_soil_moisture_avgs = [{{ week_values.41.avg_soil_moisture }}, {{ week_values.40.avg_soil_moisture }}, {{ week_values.39.avg_soil_moisture }}, {{ week_values.38.avg_soil_moisture }}, {{ week_values.37.avg_soil_moisture }}, {{ week_values.36.avg_soil_moisture }}, {{ week_values.35.avg_soil_moisture }}]
+        week7_soil_moisture_avgs = [{{ week_values.48.avg_soil_moisture }}, {{ week_values.47.avg_soil_moisture }}, {{ week_values.46.avg_soil_moisture }}, {{ week_values.45.avg_soil_moisture }}, {{ week_values.44.avg_soil_moisture }}, {{ week_values.43.avg_soil_moisture }}, {{ week_values.42.avg_soil_moisture }}]
+        week8_soil_moisture_avgs = [{{ week_values.55.avg_soil_moisture }}, {{ week_values.54.avg_soil_moisture }}, {{ week_values.53.avg_soil_moisture }}, {{ week_values.52.avg_soil_moisture }}, {{ week_values.51.avg_soil_moisture }}, {{ week_values.50.avg_soil_moisture }}, {{ week_values.49.avg_soil_moisture }}]
+
+        soilvalue = {{ soil_value }};
+
+        week_min_temps = [{{ week_values.6.min_temp }}, {{ week_values.5.min_temp }}, {{ week_values.4.min_temp }}, {{ week_values.3.min_temp }}, {{ week_values.2.min_temp }}, {{ week_values.1.min_temp }}, {{ week_values.0.min_temp }}]
+        week_max_temps = [{{ week_values.6.max_temp }}, {{ week_values.5.max_temp }}, {{ week_values.4.max_temp }}, {{ week_values.3.max_temp }}, {{ week_values.2.max_temp }}, {{ week_values.1.max_temp }}, {{ week_values.0.max_temp }}]
+
+        past_month_days = []
+        month_soil_moisture_avgs = []
+        last_water_originals_monthly = []
+        last_water_samples_monthly = []
+        monthly_gdds = []
+        month_min_temps = []
+        month_max_temps = []
+        week_values_json = {{ week_values | safe }}
+
+        for (index = 29; index >= 0; index--) {
+            past_month_days.push(week_values_json[index].jalali_date)
+            month_soil_moisture_avgs.push(week_values_json[index].avg_soil_moisture)
+            month_min_temps.push(week_values_json[index].min_temp)
+            month_max_temps.push(week_values_json[index].max_temp)
+            last_water_originals_monthly.push(week_values_json[index].last_water)
+            last_water_samples_monthly.push(week_values_json[index].last_trial_water)
+            monthly_gdds.push(week_values_json[index].gdd)
+        }
+
+        water_value = {{ water_value }}
+        water_value = 0.95
+        land_name = "{{ land.name }}"
+        {#//land_name = "مزرعه ذرت"#}
+        temp_value = "{{ temp_value }}"
+        last_water_originals = [{{ week_values.6.last_water }}, {{ week_values.5.last_water }}, {{ week_values.4.last_water }}, {{ week_values.3.last_water }}, {{ week_values.2.last_water }}, {{ week_values.1.last_water }}, {{ week_values.0.last_water }}]
+        last_water_samples = [{{ week_values.6.last_trial_water }}, {{ week_values.5.last_trial_water }}, {{ week_values.4.last_trial_water }}, {{ week_values.3.last_trial_water }}, {{ week_values.2.last_trial_water }}, {{ week_values.1.last_trial_water }}, {{ week_values.0.last_trial_water }}]
+        gdds = [{{ week_values.6.gdd }}, {{ week_values.5.gdd }}, {{ week_values.4.gdd }}, {{ week_values.3.gdd }}, {{ week_values.2.gdd }}, {{ week_values.1.gdd }}, {{ week_values.0.gdd }}]
+        today_water = "{{ today_water }}"
+        spout_1_condition = {{ spouts_condition.1.is_on|lower }}
+        today_humidity = "{{ today_humidity }}"
+        week_avg_humidity = [{{ week_values.6.avg_humidity }}, {{ week_values.5.avg_humidity }}, {{ week_values.4.avg_humidity }}, {{ week_values.3.avg_humidity }}, {{ week_values.2.avg_humidity }}, {{ week_values.1.avg_humidity }}, {{ week_values.0.avg_humidity }}]
+
+
+
+        daily_values = Object.values({{ daily_values }})
+
+
+
+
+
+
+    </script>
+    {#    <div><p>{{ spouts_condition }}</p></div>#}
+{% endblock %}

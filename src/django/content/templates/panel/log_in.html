@@ -1,0 +1,82 @@
+{% extends 'layouts/default/page.html' %}
+
+{% load static %}
+{% load bootstrap4 %}
+
+{% block content %}
+    <div class="wrapper pa-0">
+        <header class="sp-header">
+            <div class="sp-logo-wrap pull-left">
+                <a href="index.html">
+                    <img class="brand-img mr-10" src="{% static 'panel/img/logo.png' %}" alt="brand"/>
+                    <span class="brand-text">پتوس</span>
+                </a>
+            </div>
+            <div class="form-group mb-0 pull-right">
+                <span class="inline-block pr-10">آیا حساب کاربری ندارید؟</span>
+                <a class="inline-block btn btn-primary  btn-rounded" href="signup.html">ثبت نام</a>
+            </div>
+            <div class="clearfix"></div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="page-wrapper pa-0 ma-0 auth-page">
+            <div class="container-fluid">
+                <!-- Row -->
+                <div class="table-struct full-width full-height">
+                    <div class="table-cell vertical-align-middle auth-form-wrap">
+                        <div class="auth-form  ml-auto mr-auto no-float card-view pt-30 pb-30">
+                            <div class="row">
+                                <div class="col-sm-12 col-xs-12">
+                                    <div class="mb-30">
+                                        <h3 class="text-center txt-dark mb-10">ورود به پنل کاربری </h3>
+                                        <h6 class="text-center nonecase-font txt-grey">جزئیات خود را در زیر وارد کنید</h6>
+                                    </div>
+                                    <div class="form-wrap">
+
+                                        <form method="post">
+
+                                            {% csrf_token %}
+                                            {% bootstrap_form form %}
+
+                                            <button class="btn btn-primary">ورود</button>
+
+                                        </form>
+
+                                        <!--<form action="#">
+                                            <div class="form-group">
+                                                <label class="control-label mb-10" for="exampleInputEmail_2"> شماره موبایل </label>
+                                                <input type="tel" class="form-control" required="" id="phoneNumber" placeholder="شماره موبایل را وارد کنید       ">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="pull-left control-label mb-10" for="exampleInputpwd_2">پسورد</label>
+                                                <a class="capitalize-font txt-primary block mb-10 pull-right font-12" href="forgot-password.html">رمز عبور را فراموش کرده اید؟</a>
+                                                <div class="clearfix"></div>
+                                                <input type="password" class="form-control" required="" id="exampleInputpwd_2" placeholder="رمز را وارد کنید">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="checkbox checkbox-primary pr-10 pull-left">
+                                                    <input id="checkbox_2" required="" type="checkbox">
+                                                    <label for="checkbox_2">مرا به خاطر بسپار</label>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="form-group text-center">
+                                                <button type="submit" class="btn btn-primary  btn-rounded">ورود</button>
+                                            </div>
+                                        </form> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Row -->
+            </div>
+
+        </div>
+			<!-- /Main Content -->
+
+		</div>
+{% endblock %}

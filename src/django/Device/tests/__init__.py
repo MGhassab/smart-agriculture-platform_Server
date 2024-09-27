@@ -1,0 +1,1 @@
+from Device.tests.test_expected_output_v6 import EO6TestCase
